@@ -1,0 +1,14 @@
+Access_Key = "i1n4hrobs19e5109"
+Secret_Key = "2fa05066-a153-449e-8abe-b9924d92c732"
+bucket_name = "sagpedar-storage"
+DATABASE_HOST = "mysql-pedarsag-pedarsag-database.a.aivencloud.com"
+DATABASE_PORT = 23410
+DATABASE_USER = "avnadmin"
+DATABASE_PASSWORD = "AVNS_hg5Dy6F8vjNVPL5LYqE"
+DATABASE_NAME = "defaultdb"
+AMPQ_URL = "amqps://ajkkclxk:QQYu_wMY5O0mOX65Wq1RS2DH7HF3tv7X@puffin.rmq2.cloudamqp.com/ajkkclxk"
+AMPQ_PORT = 5672
+IMGGA_KEY = "acc_90fd28363fdf0df"
+IMMGA_SECRET = "f5220d12a50511bd8daacc27e00096d7"
+MAILGUN_API_KEY = "03fb9d5523459b76facf9f6a30f78f0f-324e0bb2-4eb43d2e"
+MAILGUN_DOMAIN = "sandboxcf1ed1e62dce4218bb18525646bcef7f.mailgun.org"
