@@ -47,14 +47,12 @@ def detect_face(face):
     'https://api.imagga.com/v2/faces/detections?return_face_id=1',
     auth=(IMGGA_KEY, IMMGA_SECRET),
     files={'image': face})
-    print(response.json())
     return len(response.json()['result']['faces']) > 0, response.json()
 
 def sim_faces(face_id1, face_id2):
     response = requests.get(
     'https://api.imagga.com/v2/faces/similarity?face_id=%s&second_face_id=%s' % (face_id1, face_id2),
     auth=(IMGGA_KEY, IMMGA_SECRET))
-    print(response.json())
     return response.json()['result']['score']
 
 

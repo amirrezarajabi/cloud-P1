@@ -2,3 +2,5 @@ pika
 flask
 mysql.connector
 boto3
+mysql-connector-python
+requests
