@@ -44,9 +44,7 @@ def register():
       name = request.form['name']
       national_id = request.form['national_id']
       username = hashlib.md5(str(name + email + national_id).encode()).hexdigest()
-      print("HI")
       res_db = check_db(national_id)
-      print("HI")
       if res_db[0]:
          return "you already have a request"
       national_id = hashlib.md5(str(national_id).encode()).hexdigest()
@@ -74,6 +72,7 @@ def register():
               f"UPDATE data SET username='{username}', email='{email}', name='{name}', nationalID'{national_id}', firstfile='{firstfile}', secondfile='{secondfile}', state='ongoing', ip_add='{ip_address}') WHERE nationalID='{national_id}';"
           )
           mydb.commit()
+      print('added to dataset')
       publish_on_rabbit(username)
       print("DONE")
       return "your request is submitted."

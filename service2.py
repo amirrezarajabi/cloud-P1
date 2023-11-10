@@ -70,13 +70,14 @@ def callback(ch, method, properties, body):
     urls = get_url_from_s3(ls)
     res1 = detect_face(urls[0])
     res2 = detect_face(urls[1])
+    print(ls)
     if not (res1[0] and res2[0]):
         set_in_database(username, "rejected")
         send_simple_message(ls[-1], "rejected")
     else:
         if sim_faces(res1[1]['result']['faces'][0]['face_id'], res2[1]['result']['faces'][0]['face_id']) > 80:
             set_in_database(username, "accepted")
-            send_simple_message(ls[-1], "accepted")
+            print(send_simple_message(ls[-1], "accepted").text)
         else:
             set_in_database(username, "rejected")
             send_simple_message(ls[-1], "rejected")
